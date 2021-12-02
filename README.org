@@ -1,0 +1,8 @@
+#+TITLE: Advent of Code 2021
+
+Hello world, this is my solutions for Advent of Code 2021 in Haskell.
+
+* Why Haskell?
+
+I love Haskell and it's my preferred programming language. That's
+about it, really.
