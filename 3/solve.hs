@@ -17,7 +17,7 @@ fromListBE :: Bits a => [Bool] -> a
 fromListBE = foldl' (\ a b -> shiftL a 1 .|. bool zeroBits (bit 0) b) zeroBits
 
 part1 :: [[Bool]] -> Int
-part1 xs = uncurry (*) $ bimap fromListLE fromListLE $ foldl g ([], []) $ map f $ transpose xs
+part1 xs = uncurry (*) $ bimap fromListLE fromListLE $ foldl' g ([], []) $ map f $ transpose xs
   where f xs = (length $ filter id xs, length $ filter not xs)
         g (gs, es) (t, f) = if t > f then (True : gs, False : es) else (False : gs, True : es)
 
