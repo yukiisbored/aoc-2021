@@ -12,6 +12,7 @@ import Data.Bifunctor
 type Board = [[Int]]
 type Puzzle = ([Int], [Board])
 
+win :: [Int] -> Board -> Bool
 win xs y = let f = any (all (`elem` xs)) in  f y || f (transpose y)
 
 part1 :: Puzzle -> Int
